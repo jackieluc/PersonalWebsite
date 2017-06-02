@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Nonito:700italic);
+body {
+  background-color: snow;
+}
+.name {
+  margin: 0 auto;
+  width: 1000px;
+  overflow: hidden;
+  text-align: center;
+}
+.name h1 {
+  font: 700 7.7em 'Nonito', sans-serif;
+  text-transform: uppercase;
+  background: url('../assets/images/clouds.png') -10px -100px no-repeat;
+  background-size: 1000px auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    margin-top: 2em;
+}
