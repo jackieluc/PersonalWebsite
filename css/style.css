@@ -1,19 +1,39 @@
 @import url(https://fonts.googleapis.com/css?family=Nonito:700italic);
+
+html {
+    height: 100%;
+}
+
 body {
-  background-color: snow;
+    background-color: snow;
+    min-height: 100%
 }
-.name {
-  margin: 0 auto;
-  width: 1000px;
-  overflow: hidden;
-  text-align: center;
+.container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
+
 .name h1 {
-  font: 700 7.7em 'Nonito', sans-serif;
-  text-transform: uppercase;
-  background: url('../assets/images/clouds.png') -10px -100px no-repeat;
-  background-size: 1000px auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    margin-top: 2em;
+    font: 700 7.7em 'Nonito', sans-serif;
+    text-transform: uppercase;
+    background: url('../assets/images/clouds.png') -10px -100px no-repeat;
+    background-size: 10em auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
 }
+
+@media(max-width: 768px) {
+    .name h1 {
+        font: 700 4.7em 'Nonito', sans-serif;
+    }
