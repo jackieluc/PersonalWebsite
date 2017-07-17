@@ -2,6 +2,17 @@ $(document).ready(function() {
   
   // Scroll to top upon landing/refresh
 //  window.scrollTo(0,0);
+ 
+  // Nav bar can be displayed when the screen's min-width is greater than the CSS styling
+  // Only show nav bar when the user scrolls at or beyond the about-me section
+  $(window).scroll(function() {
+    
+    if ($(window).scrollTop() >= $('#about-me').height())
+      $('#nav').fadeIn('slow');
+    else if ($('#nav').is(':visible')) {
+      $('#nav').fadeOut('slow');
+    }
+  });
   
   // Left to right scrolling background for the landing name
   let horizontal_scroll = 0;

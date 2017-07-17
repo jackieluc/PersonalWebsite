@@ -61,7 +61,7 @@ a, a:hover, a:active, button {
   font-size: 2em;
 }
 
-@media screen and (min-height: 620px) and (min-width: 768px) {
+@media screen and (min-height: 570px) and (min-width: 570px) {
   #nav {
     font-size: 12px;
     text-align: left;
@@ -76,7 +76,8 @@ a, a:hover, a:active, button {
     font-family: 'Open Sans';
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: .08em
+    letter-spacing: .08em;
+    display: none;
   }
   
   #nav-about::before {
@@ -128,10 +129,14 @@ a, a:hover, a:active, button {
     color: #888888;
   }
 }
-@media(max-width: 768px) {
+
+@media screen and (max-width: 570px) {
   #nav {
     display: none;
   }
+}
+
+@media screen and (max-width: 768px) {
   .name h1 {
     font: 700 4.7em 'Economica', sans-serif;
   }   
