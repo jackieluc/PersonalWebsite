@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
   // Scroll to top upon landing/refresh
-//  window.scrollTo(0,0);
+  $(window).scrollTop(0);
  
   // Nav bar can be displayed when the screen's min-width is greater than the CSS styling
   // Only show nav bar when the user scrolls at or beyond the about-me section
@@ -12,6 +12,12 @@ $(document).ready(function() {
     else if ($('#nav').is(':visible')) {
       $('#nav').fadeOut('slow');
     }
+    
+    // TODO: Determine whether or not to keep this logic for the embedded threejs application
+//    if (($(window).scrollTop() >= $('#threejs').height()) && ($(window).scrollTop() <= $('#contact').height())) {
+//      $('.nav-item').css('color', 'white');
+//      $('#nav-about').css('color', 'white');
+//    }
   });
   
   // Left to right scrolling background for the landing name
