@@ -19,6 +19,9 @@ a, a:hover, a:active, button {
 
 .section {
   height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .header {
@@ -57,8 +60,33 @@ a, a:hover, a:active, button {
   font-size: 2em;
 }
 
+#about-me {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+}
+
+#profile-img {
+  border: 5px solid #eee;
+  transition: all 0.2s ease-in-out;
+  margin: 20px 0;
+  padding: 1px;
+  max-width: 400px;
+}
+
+#bio {
+  margin-left: 1.5em;
+  
+}
+
 #threejs {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media screen and (min-height: 570px) and (min-width: 570px) {
@@ -139,5 +167,20 @@ a, a:hover, a:active, button {
 @media screen and (max-width: 768px) {
   .name h1 {
     font: 700 4.7em 'Economica', sans-serif;
-  }   
+  }
+  
+  .section {
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+  }
+  
+  #profile-img {
+    max-width: 300px;
+  }
+  
+  #bio {
+    font-size: 10px;
+    margin-left: 0;
+  }
 }

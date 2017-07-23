@@ -1,13 +1,14 @@
 $(document).ready(function() {
   
   // Scroll to top upon landing/refresh
-  $(window).scrollTop(0);
+//  $(window).scrollTop(0);
  
   // Nav bar can be displayed when the screen's min-width is greater than the CSS styling
   // Only show nav bar when the user scrolls at or beyond the about-me section
   $(window).scroll(function() {
     
-    if ($(window).scrollTop() >= $('#about-me').height())
+    // Offset by half so that there is some flexibility in showing navigation bar
+    if ($(window).scrollTop() >= $('#about-me').height() / 2)
       $('#nav').fadeIn('slow');
     else if ($('#nav').is(':visible')) {
       $('#nav').fadeOut('slow');
