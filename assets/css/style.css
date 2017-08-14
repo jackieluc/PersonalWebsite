@@ -1,7 +1,3 @@
-@font {
-  
-}
-
 html {
   height: 100%;
   font-family: 'Economica, 'Open Sans', sans-serif;
@@ -10,6 +6,18 @@ html {
 body {
   background-color: snow;
   min-height: 100%;
+}
+
+#bio-name {
+  font-size: 2em;
+}
+
+#bio-title {
+  font-size: 1.2em;
+}
+
+span.label {
+  font-size: 0.8em;
 }
 
 a img, button {
@@ -23,6 +31,9 @@ a, a:hover, a:active, button {
 
 .section {
   height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .header {
@@ -59,6 +70,63 @@ a, a:hover, a:active, button {
 
 .glyphicon-chevron-down {
   font-size: 2em;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-me {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+}
+
+#profile-img {
+  border: 5px solid #eee;
+  transition: all 0.2s ease-in-out;
+  margin: 20px 0;
+  padding: 1px;
+  max-width: 400px;
+}
+
+#location {
+  font-size: 0.5em;
+  color: #888888;
+}
+
+#threejs {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.description {
+  z-index: 5;
+  position: absolute;
+  color: white;
+  bottom: 0;
+  float: left;
+  max-width: 500px;
+}
+
+#coming-soon {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 @media screen and (min-height: 570px) and (min-width: 570px) {
@@ -109,7 +177,7 @@ a, a:hover, a:active, button {
     transform-origin: right top;
     transform: rotate(-90deg);
     display: inline-block;
-    color: black;
+    color: #888888;
   }
   
   #nav-items {
@@ -139,5 +207,19 @@ a, a:hover, a:active, button {
 @media screen and (max-width: 768px) {
   .name h1 {
     font: 700 4.7em 'Economica', sans-serif;
-  }   
+  }
+  
+  .section {
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+  }
+  
+  #profile-img {
+    max-width: 300px;
+  }
+  
+  #bio {
+    margin-left: 2em;
+  }
 }
