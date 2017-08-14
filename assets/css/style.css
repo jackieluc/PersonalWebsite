@@ -8,6 +8,18 @@ body {
   min-height: 100%;
 }
 
+#bio-name {
+  font-size: 2em;
+}
+
+#bio-title {
+  font-size: 1.2em;
+}
+
+span.label {
+  font-size: 0.8em;
+}
+
 a img, button {
   border: none;
 }
@@ -60,6 +72,12 @@ a, a:hover, a:active, button {
   font-size: 2em;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #about-me {
   display: -webkit-box;
   display: -moz-box;
@@ -80,9 +98,9 @@ a, a:hover, a:active, button {
   max-width: 400px;
 }
 
-#bio {
-  margin-left: 1.5em;
-  
+#location {
+  font-size: 0.5em;
+  color: #888888;
 }
 
 #threejs {
@@ -156,6 +174,10 @@ a, a:hover, a:active, button {
     transition: color .3s;
     color: #888888;
   }
+
+  #bio {
+    float: right;
+  }
 }
 
 @media screen and (max-width: 570px) {
@@ -180,7 +202,6 @@ a, a:hover, a:active, button {
   }
   
   #bio {
-    font-size: 10px;
-    margin-left: 0;
+    margin-left: 2em;
   }
 }
