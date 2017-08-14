@@ -13,15 +13,8 @@ $(document).ready(function() {
       // Offset by half so that there is some flexibility in showing navigation bar
       if ($(window).scrollTop() >= $('#about-me').height() / 2)
         $('#nav').fadeIn('slow');
-      else if ($('#nav').is(':visible')) {
+      else if ($('#nav').is(':visible'))
         $('#nav').fadeOut('slow');
-      }
-      
-      // TODO: Determine whether or not to keep this logic for the embedded threejs application
-      // if (($(window).scrollTop() >= $('#threejs').height()) && ($(window).scrollTop() <= $('#contact').height())) {
-        // $('.nav-item').css('color', 'white');
-        // $('#nav-about').css('color', 'white');
-      //  }
     });
   }
   // Left to right scrolling background for the landing name
@@ -36,9 +29,12 @@ $(document).ready(function() {
     if (isHomePage())
       $('html, body').animate( { scrollTop: $('#about-me').offset().top }, 'slow');
   });
-  
 });
 
+/**
+ * Returns true if it does not have /portfolio or /blog in it's URL
+ * Otherwise, returns false
+ */
 function isHomePage() {
   let paths = ['portfolio', 'blog'];
  
