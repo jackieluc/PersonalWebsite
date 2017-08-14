@@ -12,7 +12,7 @@ var radius = 80;
 var segments = 20;
 
 var loader = new THREE.FontLoader();
-loader.load( 'assets/fonts/droid_sans_regular.typeface.json', function ( font ) {
+loader.load( 'threejs/assets/fonts/droid_sans_regular.typeface.json', function ( font ) {
     init( font );
     animate();
 } );
@@ -74,10 +74,10 @@ function init( font ) {
     earthMesh = new THREE.Mesh(
     	new THREE.SphereGeometry( radius, segments, segments ),
     	new THREE.MeshPhongMaterial( {
-            map: THREE.ImageUtils.loadTexture( 'assets/images/2_no_clouds_4k.jpg' ),
-            bumpMap: THREE.ImageUtils.loadTexture( 'assets/images/elev_bump_4k.jpg' ),
+            map: THREE.ImageUtils.loadTexture( 'threejs/assets/images/2_no_clouds_4k.jpg' ),
+            bumpMap: THREE.ImageUtils.loadTexture( 'threejs/assets/images/elev_bump_4k.jpg' ),
     		bumpScale: 0.5,
-    		specularMap: THREE.ImageUtils.loadTexture( 'assets/images/water_4k.png' ),
+    		specularMap: THREE.ImageUtils.loadTexture( 'threejs/assets/images/water_4k.png' ),
     		specular: new THREE.Color( 'grey' ),
             overdraw: true
         } )
@@ -87,7 +87,7 @@ function init( font ) {
     cloudMesh = new THREE.Mesh(
         new THREE.SphereGeometry( radius + 0.5, segments, segments ),
     	new THREE.MeshPhongMaterial( {
-            map: THREE.ImageUtils.loadTexture( 'assets/images/fair_clouds_4k.png' ),
+            map: THREE.ImageUtils.loadTexture( 'threejs/assets/images/fair_clouds_4k.png' ),
             opacity: 0.8,
             transparent: true,
             depthWrite: false,
@@ -98,7 +98,7 @@ function init( font ) {
     starMesh = new THREE.Mesh(
         new THREE.SphereGeometry( radius + 370, segments / 2, segments / 2 ),
     	new THREE.MeshBasicMaterial( {
-            map: THREE.ImageUtils.loadTexture( 'assets/images/galaxy_starfield.png' ),
+            map: THREE.ImageUtils.loadTexture( 'threejs/assets/images/galaxy_starfield.png' ),
             side: THREE.BackSide
         } )
     );
@@ -153,6 +153,7 @@ function init( font ) {
 
     controls = new THREE.OrbitControls( camera, renderer.domElement );
     controls.noPan = true;
+    controls.noZoom = true;
     //listener to adjust when window is resized
     window.addEventListener( 'resize', onWindowResize, false );
 
