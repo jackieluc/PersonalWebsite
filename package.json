@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Jackie Luc's personal website.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "lerna clean",
+    "deploy": "lerna run deploy",
+    "empty-cache": "lerna run empty-cache",
+    "init": "cd studio && sanity init && lerna run graphql-deploy",
+    "format": "lerna run format",
+    "graphql-deploy": "lerna run graphql-deploy",
+    "lint": "lerna run lint",
+    "now-deploy": "now && now alias",
+    "postinstall": "lerna bootstrap",
+    "sanity-deploy": "lerna run sanity-deploy",
+    "start": "lerna run empty-cache && lerna run start --parallel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackieluc/personal-website.git"
+  },
+  "keywords": [
+    "gatsbyjs",
+    "reactjs",
+    "nodejs",
+    "sanityio"
+  ],
+  "author": "Jackie Luc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackieluc/personal-website/issues"
+  },
+  "homepage": "https://github.com/jackieluc/personal-website#readme",
+  "dependencies": {
+    "lerna": "^3.18.3"
+  }
+}
