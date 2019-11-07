@@ -1,11 +1,26 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
-const IndexPage = () => (
+export const query = graphql`
+  query MyQuery {
+    allSanityBlogPost {
+      totalCount
+      edges {
+        node {
+          _id
+          name
+          description
+        }
+      }
+    }
+}
+`
+
+const IndexPage = ({data}) => (
   <Layout>
     <SEO title='Home' />
     <h1>Hi people</h1>
@@ -15,6 +30,10 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to='/page-2/'>Go to page 2</Link>
+    <div className="blog-title">
+      <h2>{data.allSanityBlogPost.edges[0].node.name}</h2>
+      <p>{data.allSanityBlogPost.edges[0].node.description}</p>
+    </div>
   </Layout>
 )
 
