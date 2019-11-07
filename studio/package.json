@@ -1,10 +1,10 @@
 {
-  "name": "personalwebsite",
   "private": true,
+  "name": "jackies-personal-website-cms",
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Jackie Luc <jackieluc17@gmail.com>",
+  "author": "Jackie Luc",
   "license": "UNLICENSED",
   "scripts": {
     "deploy": "npm run graphql-deploy && npm run sanity-deploy",
