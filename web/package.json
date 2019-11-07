@@ -4,7 +4,11 @@
   "description": "Personal Website built with Gatsby.js",
   "version": "0.1.0",
   "author": "Jackie Luc",
+  "engines": {
+    "node": "10.x"
+  },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "gatsby": "^2.17.6",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-manifest": "^2.2.25",
@@ -12,14 +16,23 @@
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.34",
     "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-source-sanity": "^5.0.4",
     "gatsby-transformer-sharp": "^2.3.1",
-    "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.18.2",
+    "prettier-eslint-cli": "^5.0.0",
+    "prop-types": "^15.7.2"
   },
   "keywords": [
     "gatsby"
@@ -29,7 +42,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "empty-cache": "gatsby clean",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
@@ -41,5 +54,5 @@
   "bugs": {
     "url": "https://github.com/jackieluc/personal-website/issues"
   },
-  "homepage": "https://github.com/jackieluc/personal-website#readme",
+  "homepage": "https://github.com/jackieluc/personal-website#readme"
 }
