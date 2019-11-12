@@ -39,11 +39,26 @@ module.exports = {
         dataset,
         // a token with read permissions is required
         // if you have a private dataset
-        token: process.env.MY_SANITY_TOKEN,
+        token: process.env.SANITY_TOKEN,
         watchMode: true,
         overlayDrafts: true
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Fira Sans`,
+            subsets: [`latin`]
+          },
+          {
+            family: `Quattrocento`,
+            variants: [`400`, `700`]
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
